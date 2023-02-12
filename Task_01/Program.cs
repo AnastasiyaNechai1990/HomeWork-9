@@ -5,13 +5,12 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1" */
 
 string GetNumbers(int n)
 {
-    if(n > 0) return n.ToString();
+    if(n == 1) return "1";
     else
     {
-        return n.ToString() + " " + GetNumbers(n - 1);
+        return n.ToString() + ", " + GetNumbers(n - 1);
     }
 }
-
 
 void Main()
 {
@@ -22,3 +21,13 @@ void Main()
     Console.WriteLine(GetNumbers(num));
 }
 Main();
+
+/*string PrintNumbers(int n)
+{
+    if(n == 1) return "1";
+    else
+    {
+        return PrintNumbers(n - 1) + " " + n.ToString();
+    } 
+}
+Console.WriteLine(PrintNumbers(8));*/
